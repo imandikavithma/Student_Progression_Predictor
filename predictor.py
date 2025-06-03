@@ -1,3 +1,8 @@
+progress_count = 0
+trailer_count = 0
+retriever_count = 0
+exclude_count = 0
+
 #ensure user inputs integers in an allowed range
 def validate_input(credits):
     try:
@@ -120,3 +125,14 @@ def display_histogram(progress_count,trailer_count, retriever_count, exclude_cou
         win.close()
     except:
         pass
+
+
+    
+    if outcome == "progress":
+        progress_count += 1
+    elif "progress (module trailer)" in outcome:
+        trailer_count += 1
+    elif "retriever" in outcome:
+        retriever_count += 1
+    elif outcome == "Exclude":
+        exclude_count += 1

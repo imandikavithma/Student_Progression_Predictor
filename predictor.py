@@ -137,7 +137,7 @@ while True:
 
     outcome = calculate_outcome(pass_credits, defer_credits, fail_credits)
     print(outcome)
-    
+
     if user == 1:
     break
 
@@ -157,3 +157,17 @@ while True:
         retriever_count += 1
     elif outcome == "Exclude":
         exclude_count += 1
+
+    
+    continue_program = input("Would you like to enter another set of data?\nEnter 'y' for yes or 'q' to quit: ")# Ask the user if they want to enter another set of data
+    if continue_program.lower() == 'q':
+        break    
+
+# If the user is a staff member, display the data and histogram
+if user == 2:
+
+    f = open("process_data.txt", "r")
+    print (f.read())
+    f.close()
+
+    display_histogram(progress_count,trailer_count, retriever_count, exclude_count)

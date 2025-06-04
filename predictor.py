@@ -171,3 +171,11 @@ if user == 2:
     f.close()
 
     display_histogram(progress_count,trailer_count, retriever_count, exclude_count)
+
+    # Display results and histogram
+    print("Number of students in each category:")
+    print(f"Progress:{progress_count}")
+    print(f"module trailer:{trailer_count}")
+    print(f"module Retriever:{retriever_count}")
+    print(f"Exclude:{exclude_count}")
+    print(f"Total students:{progress_count + trailer_count + retriever_count + exclude_count }")

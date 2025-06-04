@@ -179,3 +179,8 @@ if user == 2:
     print(f"module Retriever:{retriever_count}")
     print(f"Exclude:{exclude_count}")
     print(f"Total students:{progress_count + trailer_count + retriever_count + exclude_count }")
+
+
+#Display list
+for data in progression_data:
+        print(f"{data[0]} - {data[1]}, {data[2]}, {data[3]}")

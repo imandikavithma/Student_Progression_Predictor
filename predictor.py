@@ -126,6 +126,21 @@ def display_histogram(progress_count,trailer_count, retriever_count, exclude_cou
     except:
         pass
 
+progression_data = []
+
+user = int(input("Are you student (press 1) staff member(press 2) :"))
+
+while True:
+    pass_credits = validate_input(input("Please enter your credits at pass: "))
+    defer_credits = validate_input(input("Please enter your credit at defer: "))
+    fail_credits = validate_input(input("Please enter your credit at fail: "))
+
+    outcome = calculate_outcome(pass_credits, defer_credits, fail_credits)
+    print(outcome)
+    
+    if user == 1:
+    break
+
 
     f = open("process_data.txt", "a")# Open the file in append mode
 

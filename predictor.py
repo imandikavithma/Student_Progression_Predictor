@@ -127,6 +127,12 @@ def display_histogram(progress_count,trailer_count, retriever_count, exclude_cou
         pass
 
 
+    f = open("process_data.txt", "a")# Open the file in append mode
+
+    progression_data.append((outcome, pass_credits, defer_credits, fail_credits))
+    f.write(f"{outcome} - {pass_credits}, {defer_credits}, {fail_credits}\n") # Write data to the file
+
+
     
     if outcome == "progress":
         progress_count += 1
